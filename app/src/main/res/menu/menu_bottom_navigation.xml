@@ -8,11 +8,11 @@
     <item
         android:id="@+id/nav_dorms"
         android:icon="@drawable/logo"
-        android:title="dorms" />
+        android:title="@string/dorms" />
 
     <item
         android:id="@+id/nav_halls"
         android:icon="@drawable/logo"
-        android:title="halls" />
+        android:title="@string/halls" />
 
 </menu>
