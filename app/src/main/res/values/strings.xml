@@ -6,7 +6,6 @@
     <string name="dorms">dorms</string>
     <string name="halls">halls</string>
     <string name="homewood_accessibility_map_logo">Homewood Accessibility Map logo</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
     <string name="amr_ii">AMR II</string>
-    <string name="amr_i">AMR I</string>
 </resources>
