@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://gitpoint.co/">
+  <a href="https://accessibility.jhu.edu/">
     <img alt="HAM logo" title="HAM" src="https://i.postimg.cc/8kR4TZwC/ham-2.png" width="450">
   </a>
 </p>
