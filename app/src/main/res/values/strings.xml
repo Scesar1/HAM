@@ -2,4 +2,5 @@
 
 <resources>
     <string name="app_name">HAM</string>
+    <string name="food">food</string>
 </resources>
