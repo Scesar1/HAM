@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/debug/res/drawable/app_logo_background.xml" value="0.1425" />
+        <entry key="app/src/main/res/drawable/food.xml" value="0.1425" />
+        <entry key="app/src/main/res/drawable/nav_background_curved.xml" value="0.1425" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2760416666666667" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.29010416666666666" />
+        <entry key="app/src/main/res/layout/fragment_food_page.xml" value="0.13229166666666667" />
         <entry key="app/src/main/res/layout/fragment_map.xml" value="0.11822916666666666" />
         <entry key="app/src/main/res/menu/bar_menu.xml" value="0.13125" />
         <entry key="app/src/main/res/xml/searchable.xml" value="0.2890625" />
