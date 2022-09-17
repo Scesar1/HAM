@@ -33,11 +33,12 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="413dp"
-        android:layout_height="69dp"
+        android:layout_width="382dp"
+        android:layout_height="83dp"
+        android:layout_centerInParent="true"
         android:id="@+id/nav_view"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/menu_bottom_navigation"
-        android:layout_centerInParent="true"/>
+        android:background="@drawable/nav_background_curved"
+        app:menu="@menu/menu_bottom_navigation" />
+
 
 </RelativeLayout>
