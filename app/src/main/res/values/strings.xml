@@ -3,4 +3,6 @@
 <resources>
     <string name="app_name">HAM</string>
     <string name="food">food</string>
+    <string name="dorms">dorms</string>
+    <string name="halls">halls</string>
 </resources>
