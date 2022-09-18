@@ -60,4 +60,6 @@
     <color name="md_theme_dark_surfaceTint">#7BDA9D</color>
     <color name="md_theme_dark_surfaceTintColor">#7BDA9D</color>
     <color name="colorPolyLineBlue">#2AAFF7</color>
+    <color name="colorPolyLineRed">#DF3D31</color>
+    <color name="colorPolyLineGreen">#4CAF50</color>
 </resources>

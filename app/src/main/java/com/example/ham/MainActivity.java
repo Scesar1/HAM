@@ -114,4 +114,5 @@ public class MainActivity extends AppCompatActivity
             EasyPermissions.requestPermissions(this, "Please grant the location permission", REQUEST_LOCATION_PERMISSION, perms);
         }
     }
+
 }

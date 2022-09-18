@@ -11,10 +11,12 @@ import android.location.LocationManager;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -45,6 +47,19 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, OnMapAn
     LocationManager locationManager;
     LocationListener locationListener;
     LatLng userLatLng;
+    int food;
+    int dorm;
+    int hall;
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            food = getArguments().getInt("bundleKey1", 0);
+            dorm = getArguments().getInt("bundleKey2", 0);
+            hall = getArguments().getInt("bundleKey3", 0);
+
+
+        }
+    }
 
     @SuppressLint("MissingPermission")
     @Override
@@ -96,7 +111,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, OnMapAn
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(myAct, R.raw.style_json));
-        drawAllPolyLines();
+
+        if (food == 1)
+            drawHopkinsCafePolyLine();
+        if (dorm == 1)
+            drawAMRPolyLine();
+        if (hall == 1)
+            drawGilmanPolyLine();
+
         if (ContextCompat.checkSelfPermission(myAct, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             googleMap.setMyLocationEnabled(true);
         } else {
@@ -136,13 +158,29 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, OnMapAn
         };
     }
 
-    private void drawAllPolyLines() {
+    private void drawAMRPolyLine() {
         // Add a blue Polyline.
         mMap.addPolyline(new PolylineOptions()
                 .color(getResources().getColor(R.color.colorPolyLineBlue)) // Line color.
-                .width(10) // Line width.
+                .width(15) // Line width.
                 .clickable(false) // Able to click or not.
                 .addAll(readEncodedPolyLinePointsFromCSV(myAct, "lineBlue"))); // all the whole list of lat lng value pairs which is retrieved by calling helper method readEncodedPolyLinePointsFromCSV.
 
+    }
+
+    private void drawHopkinsCafePolyLine() {
+        mMap.addPolyline(new PolylineOptions()
+                .color(getResources().getColor(R.color.colorPolyLineRed))
+                .width(15) // Line width.
+                .clickable(false) // Able to click or not.
+                .addAll(readEncodedPolyLinePointsFromCSV(myAct, "lineRed")));
+    }
+
+    private void drawGilmanPolyLine() {
+        mMap.addPolyline(new PolylineOptions()
+                .color(getResources().getColor(R.color.colorPolyLineGreen))
+                .width(15) // Line width.
+                .clickable(false) // Able to click or not.
+                .addAll(readEncodedPolyLinePointsFromCSV(myAct, "lineGreen")));
     }
 }

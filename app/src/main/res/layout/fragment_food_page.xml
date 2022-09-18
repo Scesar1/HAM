@@ -8,13 +8,13 @@
     tools:context=".FoodPage">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/hopcafeBtn"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:textSize="28sp"
 
         android:text="@string/hopkins_cafe"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/leveringBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.811" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/leveringBtn"
         android:layout_width="350dp"
         android:textSize="28sp"
         android:layout_height="70dp"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.467" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/brodyBtn"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:textSize="28sp"
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/leveringBtn"
         app:layout_constraintVertical_bias="0.145" />
 
     <ImageView
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/app_logo_foreground"
         android:contentDescription="@string/ham_logo"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/hopcafeBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
