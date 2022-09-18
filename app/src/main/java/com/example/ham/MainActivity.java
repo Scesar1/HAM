@@ -6,11 +6,15 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-public class MainActivity<FusedLocationProviderClient> extends AppCompatActivity {
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMapOptions;
+import com.google.android.gms.maps.SupportMapFragment;
+
+public class MainActivity extends AppCompatActivity {
 
     private Fragment mapFrag;
     private FragmentTransaction transaction;
-    private FusedLocationProviderClient client;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +23,12 @@ public class MainActivity<FusedLocationProviderClient> extends AppCompatActivity
 
         mapFrag = new MapFragment();
 
+        GoogleMapOptions options = new GoogleMapOptions();
+
         getSupportFragmentManager()
                 .beginTransaction().replace(R.id.fragment_container, mapFrag)
                 .commit();
+
 
     }
 }

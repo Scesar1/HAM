@@ -6,10 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MapFragment">
 
-    <fragment
+    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/google_map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        map:cameraBearing="0"
+        map:cameraTargetLat="39.328888"
+        map:cameraTargetLng="-76.620277"
+        map:cameraTilt="0"
+        map:cameraZoom="17.5"
+        map:mapType="normal"
+        map:uiCompass="false"
+        map:uiRotateGestures="true"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="false"
+        map:uiZoomControls="true"
+        map:uiZoomGestures="true"
+
+        />
 
 </RelativeLayout>
