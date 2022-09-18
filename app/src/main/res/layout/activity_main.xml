@@ -7,12 +7,18 @@
     android:background="@color/md_theme_dark_onSecondaryContainer"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbar"
+        android:background="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:elevation="0dp">
-
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
             android:background="@drawable/rounded_corner_view"
@@ -21,14 +27,6 @@
             app:menu="@menu/bar_menu"
             app:titleCentered="true" />
     </com.google.android.material.appbar.AppBarLayout>
-
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/nav_view"
-        android:layout_below="@id/toolbar">
-    </FrameLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -40,6 +38,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/nav_background_curved"
         app:itemIconTint="?attr/colorPrimaryInverse"
+        app:labelVisibilityMode="labeled"
         app:itemTextColor="@color/md_theme_dark_onSecondaryContainer"
         app:menu="@menu/menu_bottom_navigation" />
 
