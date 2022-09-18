@@ -11,7 +11,7 @@
 - [Inspiration](#inspiration)
 - [What it Does](#what-it-does)
 - [How We Built It](#how-we-built-it)
-- [Challenges We Ran Into](#challenges)
+- [Challenges We Ran Into](#challenges-we-ran-into)
 - [Accomplishments That We're Proud Of](#accomplishments-that-we're-proud-of)
 - [What We Learned](#what-we-learned)
 - [What's Next](#what's-next)
@@ -20,6 +20,9 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Inspiration
+<p>
+  We were inspired by Johns Hopkins University's <a href="https://accessibility.jhu.edu/">Campus Accessibility Map</a> that was made in collaboration with the Institute for Human Centered Design (IHCD).
+</p>
 
 ## What it Does
 
