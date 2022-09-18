@@ -32,7 +32,7 @@
 
 ## Inspiration
 <p>
-  We were inspired by Johns Hopkins University's <a href="https://accessibility.jhu.edu/">Campus Accessibility Map</a> that was made in collaboration with the Institute for Human Centered Design (IHCD).
+  We were inspired by Johns Hopkins University's <a href="https://accessibility.jhu.edu/">Campus Accessibility Map</a> that was made in collaboration with the Institute for Human Centered Design (IHCD). The Student Disability Services office released this accessibility map in August 2022, after being requested to do so by disabled students on campus for multiple years and we wanted to translate this into a mobile, more easily accessible platform.
 </p>
 
 <p align="center">
@@ -41,11 +41,22 @@
 
 ## What it Does
 
+<p>
+When users enter a starting location and destination, they’ll be presented with an accessible path to take; that is, a path that has wheelchair access and is ADA compliant.
+</p>
+
 <p align="center">
 <img alt="break" src="https://i.postimg.cc/J4wXMvzD/break.png">
 </p>
 
 ## How We Built It
+
+<p>
+-Drafted design in Figma
+-Built in Android Studio using Java, HTML, CSS, and Javascript
+-Created logo with Canva and Procreate using bitmap and vectorized files
+-Maintained a shared repository in Github
+</p>
 
 <p align="center">
 <img alt="break" src="https://i.postimg.cc/J4wXMvzD/break.png">
