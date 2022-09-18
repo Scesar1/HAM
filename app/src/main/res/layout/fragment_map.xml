@@ -23,7 +23,7 @@
         map:uiTiltGestures="false"
         map:uiZoomControls="true"
         map:uiZoomGestures="true"
-
+        map:mapId="@string/map_id"
         />
 
 </RelativeLayout>

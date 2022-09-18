@@ -9,7 +9,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -22,15 +21,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ham.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -98,6 +96,28 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             myAct.requestLocationPermission();
         }
         // When map is loaded
+
+        LatLng mark1 = new LatLng(39.329071, -76.619175);
+        googleMap.addMarker(new MarkerOptions().position(mark1).title("MSE Front Entrance").icon(BitmapDescriptorFactory.fromResource(R.drawable.accessible)));
+
+        LatLng mark2 = new LatLng(39.329048, -76.619754);
+        googleMap.addMarker(new MarkerOptions().position(mark2).title("MSE Back Entrance").icon(BitmapDescriptorFactory.fromResource(R.drawable.accessible)));
+
+        LatLng mark3 = new LatLng(39.328644328919815, -76.61962244790644);
+        googleMap.addMarker(new MarkerOptions().position(mark3).title("Brody Cafe Entrance").icon(BitmapDescriptorFactory.fromResource(R.drawable.accessible)));
+
+        LatLng mark4 = new LatLng(39.32869661492257, -76.62000848829113);
+        googleMap.addMarker(new MarkerOptions().position(mark4).title("Krieger Hall Entrance").icon(BitmapDescriptorFactory.fromResource(R.drawable.accessible)));
+
+        LatLng mark5 = new LatLng(39.32963836357293, -76.62035402342596);
+        googleMap.addMarker(new MarkerOptions().position(mark5).title("Remsen Hall Entrance").icon(BitmapDescriptorFactory.fromResource(R.drawable.accessible)));
+
+        LatLng mark6 = new LatLng(39.328991990969776, -76.62119339984896);
+        googleMap.addMarker(new MarkerOptions().position(mark6).title("Gilman Hall Entrance").icon(BitmapDescriptorFactory.fromResource(R.drawable.accessible)));
+
+        LatLng mark7 = new LatLng(39.32824700125401, -76.61937276900144);
+        googleMap.addMarker(new MarkerOptions().position(mark7).title("Brody Commons Side Entrance").icon(BitmapDescriptorFactory.fromResource(R.drawable.accessible)));
+
         locationManager = (LocationManager) myAct.getSystemService(Context.LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
