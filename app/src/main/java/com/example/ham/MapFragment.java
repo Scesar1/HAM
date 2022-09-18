@@ -162,7 +162,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, OnMapAn
         // Add a blue Polyline.
         mMap.addPolyline(new PolylineOptions()
                 .color(getResources().getColor(R.color.colorPolyLineBlue)) // Line color.
-                .width(15) // Line width.
+                .width(20) // Line width.
                 .clickable(false) // Able to click or not.
                 .addAll(readEncodedPolyLinePointsFromCSV(myAct, "lineBlue"))); // all the whole list of lat lng value pairs which is retrieved by calling helper method readEncodedPolyLinePointsFromCSV.
 
@@ -171,7 +171,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, OnMapAn
     private void drawHopkinsCafePolyLine() {
         mMap.addPolyline(new PolylineOptions()
                 .color(getResources().getColor(R.color.colorPolyLineRed))
-                .width(15) // Line width.
+                .width(20) // Line width.
                 .clickable(false) // Able to click or not.
                 .addAll(readEncodedPolyLinePointsFromCSV(myAct, "lineRed")));
     }
@@ -179,7 +179,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, OnMapAn
     private void drawGilmanPolyLine() {
         mMap.addPolyline(new PolylineOptions()
                 .color(getResources().getColor(R.color.colorPolyLineGreen))
-                .width(15) // Line width.
+                .width(20) // Line width.
                 .clickable(false) // Able to click or not.
                 .addAll(readEncodedPolyLinePointsFromCSV(myAct, "lineGreen")));
     }
