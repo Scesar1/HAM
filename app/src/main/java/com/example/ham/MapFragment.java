@@ -1,5 +1,7 @@
 package com.example.ham;
 
+import static com.example.ham.Utils.readEncodedPolyLinePointsFromCSV;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -33,9 +35,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-public class MapFragment extends Fragment implements OnMapReadyCallback {
+public class MapFragment extends Fragment implements OnMapReadyCallback, OnMapAndViewReadyListener.OnGlobalLayoutAndMapReadyListener {
     FusedLocationProviderClient client;
     private MainActivity myAct;
     private GoogleMap mMap;
@@ -93,6 +96,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(myAct, R.raw.style_json));
+        drawAllPolyLines();
         if (ContextCompat.checkSelfPermission(myAct, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             googleMap.setMyLocationEnabled(true);
         } else {
@@ -130,5 +134,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(userLatLng));
             }
         };
+    }
+
+    private void drawAllPolyLines() {
+        // Add a blue Polyline.
+        mMap.addPolyline(new PolylineOptions()
+                .color(getResources().getColor(R.color.colorPolyLineBlue)) // Line color.
+                .width(10) // Line width.
+                .clickable(false) // Able to click or not.
+                .addAll(readEncodedPolyLinePointsFromCSV(myAct, "lineBlue"))); // all the whole list of lat lng value pairs which is retrieved by calling helper method readEncodedPolyLinePointsFromCSV.
+
     }
 }
