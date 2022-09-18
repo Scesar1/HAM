@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://accessibility.jhu.edu/">
-    <img alt="HAM logo" title="HAM" src="https://i.postimg.cc/8kR4TZwC/ham-2.png" width="450">
+    <img alt="HAM Homewood Accessibility Map logo" title="HAM" src="https://i.postimg.cc/cJMDFZCf/Copy-of-ham.png" width="450">
   </a>
 </p>
 
