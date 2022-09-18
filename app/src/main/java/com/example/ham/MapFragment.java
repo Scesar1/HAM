@@ -1,6 +1,9 @@
 package com.example.ham;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -8,6 +11,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -28,6 +33,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
 
 public class MapFragment extends Fragment implements OnMapReadyCallback {
     FusedLocationProviderClient client;
@@ -37,22 +43,25 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     LocationListener locationListener;
     LatLng userLatLng;
 
+    @SuppressLint("MissingPermission")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         // Initialize view
         View view = inflater.inflate(R.layout.fragment_map, container, false);
         myAct = (MainActivity) getActivity();
         setHasOptionsMenu(true);
 
 
-        client = LocationServices.getFusedLocationProviderClient(getActivity());
         // Initialize map fragment
         SupportMapFragment mapFragment = (SupportMapFragment)
                 getChildFragmentManager().findFragmentById(R.id.map);
 
         // Async map
         mapFragment.getMapAsync(this);
+
         // Return view
         return view;
     }
@@ -83,6 +92,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
+        if (ContextCompat.checkSelfPermission(myAct, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            googleMap.setMyLocationEnabled(true);
+        } else {
+            myAct.requestLocationPermission();
+        }
         // When map is loaded
         locationManager = (LocationManager) myAct.getSystemService(Context.LOCATION_SERVICE);
         locationListener = new LocationListener() {
@@ -95,9 +109,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
             }
         };
 
-        askLocationPermission();
     }
 
-    private void askLocationPermission() {
-    }
 }

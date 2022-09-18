@@ -19,11 +19,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:elevation="0dp">
+
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
-            android:background="@drawable/rounded_corner_view"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/rounded_corner_view"
+            android:layout_marginEnd="50dp"
             app:menu="@menu/bar_menu"
             app:titleCentered="true" />
     </com.google.android.material.appbar.AppBarLayout>
