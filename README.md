@@ -8,6 +8,9 @@
 <img alt="break" src="https://i.postimg.cc/J4wXMvzD/break.png">
 </p>
 
+<p align="center">
+  Made during HopHacks 2022 - <a href="https://github.com/iparris1">Ireland Parrish</a>, <a href="https://github.com/jamnavarro">Jam Navarro</a>, and <a href="https://github.com/scesar1">Shalom Cesar</a>
+  
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
