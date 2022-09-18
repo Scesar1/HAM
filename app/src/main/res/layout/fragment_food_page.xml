@@ -11,6 +11,8 @@
         android:id="@+id/button2"
         android:layout_width="350dp"
         android:layout_height="70dp"
+        android:textSize="28sp"
+
         android:text="@string/hopkins_cafe"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +24,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="350dp"
+        android:textSize="28sp"
         android:layout_height="70dp"
         android:text="@string/levering_kitchens"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,6 +38,7 @@
         android:id="@+id/button3"
         android:layout_width="350dp"
         android:layout_height="70dp"
+        android:textSize="28sp"
         android:text="@string/brody_cafe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
