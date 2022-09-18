@@ -15,9 +15,9 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
+            android:background="@drawable/rounded_corner_view"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@null"
             app:menu="@menu/bar_menu"
             app:titleCentered="true" />
     </com.google.android.material.appbar.AppBarLayout>
@@ -27,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/nav_view"
-        android:layout_below="@id/toolbar"></FrameLayout>
+        android:layout_below="@id/toolbar">
+    </FrameLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
