@@ -8,4 +8,11 @@
     <string name="homewood_accessibility_map_logo">Homewood Accessibility Map logo</string>
     <string name="search">Search</string>
     <string name="amr_ii">AMR II</string>
+    <string name="amr_i">AMR I</string>
+    <string name="amr_iii">AMR III</string>
+    <string name="back">BACK</string>
+    <string name="ham_logo">HAM logo</string>
+    <string name="hopkins_cafe">Hopkins Cafe</string>
+    <string name="levering_kitchens">Levering Kitchens</string>
+    <string name="brody_cafe">Brody Cafe</string>
 </resources>

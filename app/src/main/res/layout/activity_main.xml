@@ -15,9 +15,9 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
+            android:background="@drawable/rounded_corner_view"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@null"
             app:menu="@menu/bar_menu"
             app:titleCentered="true" />
     </com.google.android.material.appbar.AppBarLayout>
@@ -27,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/nav_view"
-        android:layout_below="@id/toolbar"></FrameLayout>
+        android:layout_below="@id/toolbar">
+    </FrameLayout>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -38,8 +39,8 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="10dp"
         android:background="@drawable/nav_background_curved"
-        app:itemIconTint="?attr/colorOnPrimary"
-        app:itemTextColor="@color/design_default_color_on_primary"
+        app:itemIconTint="?attr/colorPrimaryInverse"
+        app:itemTextColor="@color/md_theme_dark_onSecondaryContainer"
         app:menu="@menu/menu_bottom_navigation" />
 
 
